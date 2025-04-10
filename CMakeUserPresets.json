@@ -5,5 +5,16 @@
     },
     "include": [
         "build/CMakePresets.json"
+    ],
+    "configurePresets": [
+        {
+            "name": "default",
+            "generator": "Ninja",
+            "inherits": "conan-release",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "YES"
+            }
+        }
     ]
 }
